@@ -6,6 +6,9 @@ describe("Funciones en JavaScript", () => {
 
         // Escribe aquí tu funcion "saludar"
         
+        function saludar (nombre) {
+            return "Hola," + " " + nombre
+        }
         
         expect(saludar(name)).toBe("Hola, Rosa");
     })
@@ -16,8 +19,9 @@ describe("Funciones en JavaScript", () => {
         let num2 = 10;
 
         // Escribe aquí tu función "suma"
-        
-
+        function suma (operando1,operando2) {
+            return operando1 + operando2
+        }
         expect(suma(num1, num2)).toEqual(27);
     })
 
@@ -31,6 +35,9 @@ describe("Funciones en JavaScript", () => {
 
         // Escribe aquí tu función "weatherReport" (fíjate en el 'expect' para saber qué debe retornar esta función).
         
+        function weatherReport (user,who,where,weather,rain) {
+            return "Hola " + who + " " + "(" + user + ")," + " " + "hoy en" + " " + where + " el tiempo es " + weather + " y las probabilidades de lluvia son del " + rain + "." 
+        }
 
         expect(weatherReport(userName, name, city, weather, rainProbability)).toEqual("Hola Ada Martín (ada89), hoy en Las Vegas el tiempo es soleado y las probabilidades de lluvia son del 10%.");
     })
