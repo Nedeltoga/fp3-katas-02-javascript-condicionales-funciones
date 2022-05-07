@@ -7,7 +7,7 @@ describe("Funciones en JavaScript", () => {
         // Escribe aquí tu funcion "saludar"
         
         function saludar (nombre) {
-            return "Hola," + " " + nombre
+            return `Hola, ${name}`;
         }
         
         expect(saludar(name)).toBe("Hola, Rosa");
@@ -36,7 +36,7 @@ describe("Funciones en JavaScript", () => {
         // Escribe aquí tu función "weatherReport" (fíjate en el 'expect' para saber qué debe retornar esta función).
         
         function weatherReport (user,who,where,weather,rain) {
-            return "Hola " + who + " " + "(" + user + ")," + " " + "hoy en" + " " + where + " el tiempo es " + weather + " y las probabilidades de lluvia son del " + rain + "." 
+            return `Hola ${who} (${user}), hoy en ${where} el tiempo es ${weather} y las probabilidades de lluvia son del ${rain}.`
         }
 
         expect(weatherReport(userName, name, city, weather, rainProbability)).toEqual("Hola Ada Martín (ada89), hoy en Las Vegas el tiempo es soleado y las probabilidades de lluvia son del 10%.");
@@ -48,15 +48,17 @@ describe("Funciones en JavaScript", () => {
 // BONUS: Crea un test que te permita testear la función que verás a continuación. Para ello, también te hemos proporcionado las variables que necesitarás (y alguna más que no necesitarás, para confundir :P). 
 // Recuerda quitar la puntuación de comentario (/* ... */) para que este código a continuación sea legible, e inclúyelo dentro de tu test.
 
-/* 
-let userName = "Ariana28";
-let userAge = 38;
-let userEmail = "ariana_28@gmail.com";
-let userLocation = "Barcelona"
-let userIsRegistered = true;
-let password = "p4s$w0rDs3guR0";
+describe("Bonus", () => {
+    let userName = "Ariana28";
+    let userAge = 38;
+    let userEmail = "ariana_28@gmail.com";
+    let userLocation = "Barcelona"
+    let userIsRegistered = true;
+    let password = "p4s$w0rDs3guR0";
+    
+    function userAuth(userName, userEmail, password) {
+        return `Welcome ${userName}, your email is ${userEmail} and your password is ${password}.`
+    } 
 
-function userAuth(userName, userEmail, password) {
-    return "Welcome ${userName}, your email is ${userEmail} and your password is ${password}."
-} 
-*/
+    expect(userAuth (userName, userEmail,password)).toBe(`Welcome Ariana28, your email is ariana_28@gmail.com and your password is p4s$w0rDs3guR0.`)
+})

@@ -58,12 +58,13 @@ describe("Escribe tus propios tests", () => {
             greeting = "Hello!"
         }
         else { 
-            greeting = "Hola" 
+            greeting = "¡Hola!" 
         }
 
         expect(greeting).toBe("Hello!");
     })
-
+        // otra opción con condicional ternario
+        // country === 'UK' ? greeting = "Hello!" : greeting = "¡Hola!"
 
     test("Para saludar a alguien hay que saber la hora. Si es antes de las 12, le decimos 'Buenos días', si es después de las 12 pero antes de las 20, le decimos 'Buenas tardes', y si es después de las 20, le decimos 'Buenas noches'", () => {
         let hour = 19;
@@ -72,13 +73,13 @@ describe("Escribe tus propios tests", () => {
         // Escribe aquí tu condicional contemplando las 3 casuísticas
         
         if (hour < 12) {
-            saludo = 'Buenos días'
+            saludo = 'Buenos días';
         }
         else if (hour < 20 && hour > 12) {
-            saludo = 'Buenas tardes'
+            saludo = 'Buenas tardes';
         }
         else {
-            saludo = 'Buenas noches'
+            saludo = 'Buenas noches';
         }
 
         expect(saludo).toEqual("Buenas tardes");
